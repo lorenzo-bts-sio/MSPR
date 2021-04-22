@@ -5,8 +5,6 @@ public class Commande
 {
     private Client client = new Client();
     private Date date = new Date();
-   // private HashMap<Produit ,Integer > listeProduits = new HashMap<Produit, Integer>();
-    
 
     public Commande( Client client  , Date date  , HashMap listeProduits  )
     {
@@ -17,11 +15,11 @@ public class Commande
 
     }
 
-    public double getPrix(HashMap listeProduits)
+    public double getSomme(HashMap listeProduits)
     {
         double somme = 0 ; 
         for (Produit i : listeProduits.keySet())
-            somme +=  (i.prix()  ; 
+            somme +=  i.prix()  ;  // ajouter la quantiter produit pour le calul
         return somme;  
     }
 
