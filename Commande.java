@@ -5,7 +5,7 @@ public class Commande
 {
     private Client client = new Client();
     private Date date = new Date();
-    private HashMap<Produit ,Integer > listeProduits = new HashMap<Produit, Integer>();
+   // private HashMap<Produit ,Integer > listeProduits = new HashMap<Produit, Integer>();
     
 
     public Commande( Client client  , Date date  , HashMap listeProduits  )
@@ -17,22 +17,12 @@ public class Commande
 
     }
 
-    public void getPrix(HashMap listeProduits)
+    public double getPrix(HashMap listeProduits)
     {
         double somme = 0 ; 
         for (Produit i : listeProduits.keySet())
-            somme += i.prix() ; 
-          
+            somme +=  (i.prix()  ; 
+        return somme;  
     }
-
-
-    
-
-
-
-
-
-
-
 
 }
